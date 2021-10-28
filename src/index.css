@@ -1,13 +1,450 @@
-body {
+html {
+  scroll-behavior: smooth;
+}
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ----------GLOBAL STYLES---------- */
+
+:root {
+  --white: #fff;
+  --block: #595959;
+  --skyblue: #3180f5;
+  --bg-color: #e5e5e5;
+  --text-gray: #737373;
+}
+
+.blue {
+  color: var(--skyblue);
+}
+.gray {
+  color: var(--text-gray);
+}
+
+.font-one {
+  font-size: 0.9rem;
+}
+
+/* ---------- END GLOBAL STYLES---------- */
+
+/* ---------- HEADER SECTION STYLES---------- */
+header,
+nav {
+  background-color: var(--bg-color) !important;
+}
+
+.container-fluid {
+  padding: 1rem 6rem !important;
+  background-color: var(--bg-color) !important;
+}
+
+.chirp-logo {
+  color: var(--skyblue) !important;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: 600;
+}
+
+.nav-link {
+  font-weight: 300 !important;
+  margin-right: 0.5rem;
+}
+
+.sign-btn {
+  border: 1px solid #1da1f2;
+  border-radius: 5px;
+  padding: 0.5rem 1rem !important;
+  font-weight: bold !important;
+  font-size: 0.9rem;
+  color: var(--white) !important;
+  background: #1da1f2;
+}
+.fab {
+  margin-right: 0.5rem;
+}
+
+/* ---------- END HEADER SECTION STYLES---------- */
+
+/* ---------- CTA SECTION STYLES---------- */
+
+main {
+  padding: 3rem 6rem;
+  background-color: var(--bg-color);
+}
+
+.leftSide {
+  padding: 4rem 0;
+}
+
+.main-cta-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  width: 75%;
+}
+
+.main-cta-text2 {
+  font-size: 1rem;
+  color: #737373;
+  width: 68%;
+}
+.learnmore {
+  text-decoration: none;
+  font-weight: bold;
+  color: #1f7898;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.overlap {
+  padding: 1.5rem 0;
+}
+
+.join {
+  max-width: 50%;
+  font-weight: 300;
+}
+
+.join span {
+  color: #1f7898;
+  font-weight: 600;
+}
+
+.profile-cta {
+  width: 450px;
+}
+
+.right-img {
+  width: 100%;
+  height: 100%;
+}
+/* ---------- END OF CTA SECTION STYLES---------- */
+
+/* ---------- FEATURES SECTION STYLES---------- */
+
+.features {
+  padding: 3rem 6rem;
+}
+
+.features-header {
+  width: 40%;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.card-container {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-one {
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  flex-basis: 49% !important;
+  height: 100% !important;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  line-height: 22px;
+  font-weight: 600;
+  color: #000000;
+}
+
+.card-text {
+  color: #737373 !important;
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+.what-section {
+  padding: 2rem 6rem;
+  background: #d7f5f5;
+}
+
+.what-title {
+  font-weight: 600;
+  margin: 2rem 0;
+}
+
+.secondcard {
+  flex-basis: 30% !important;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.profile-names {
+  padding-left: 0.5rem;
+}
+
+.profile-names p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.twitter-name {
+  color: var(--text-gray);
+}
+
+.heart {
+  color: red;
+}
+
+.profile-text {
+  padding: 1.5rem 0;
+  max-width: 80%;
+  line-height: 25px;
+}
+
+.font-normal {
+  font-weight: 250;
+}
+
+.down {
+  align-items: flex-start;
+}
+
+/* ---------- END FEATURES SECTION STYLES---------- */
+
+/* ---------- BEGINNING OF PRICES SECTION STYLES---------- */
+
+.price-plan {
+  padding: 3rem 6rem;
+}
+
+.plan-card {
+  background: #fbf8f3;
+  border: 1px solid #ffad23;
+  border-radius: 10px;
+  padding: 2rem;
+}
+.month {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-gray);
+}
+
+.simple-title {
+  font-weight: 900;
+}
+
+.price-text {
+  text-align: center;
+  max-width: 40%;
+  font-weight: 300;
+}
+.plan-card {
+  margin: 2rem 0;
+}
+
+.plan-amount {
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.plan-per {
+  font-weight: 300;
+}
+.plans-list {
+  list-style-image: url("./assets/Checkmark.svg");
+  list-style-position: outside;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+}
+
+.plans-list li {
+  padding: 0.5rem 0;
+  color: #737373;
+  font-weight: 300;
+  max-width: 80%;
+}
+
+.circle {
+  color: #2ed8af;
+  padding-right: 0.5rem;
+}
+
+/* ---------- END OF PLAN SECTION SECTION STYLES---------- */
+
+/* ---------- FOOTER SECTION STYLES---------- */
+
+.footer-section {
+  padding: 1rem 6rem;
+  background: #d7f5f5;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+}
+
+.footer-links a {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.tab-view {
+  display: none;
+}
+
+/* ----------END OF FOOTER SECTION STYLES---------- */
+@media only screen and (min-width: 769px) and (max-width: 1144px) {
+  .container-fluid {
+    padding: 1rem 2rem !important;
+  }
+  main {
+    flex-direction: column-reverse;
+    padding: 2rem 2rem;
+  }
+  .profile-cta {
+    width: 100%;
+  }
+
+  .tab-view {
+    display: block;
+    width: 100%;
+  }
+
+  .web-view {
+    display: none;
+  }
+
+  .features {
+    padding: 2rem 2rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  /*-------WHAT SECTION----------*/
+
+  .down {
+    flex-direction: row;
+    overflow-y: scroll;
+  }
+
+  .secondcard {
+    flex-basis: 50%;
+  }
+
+  .what-section {
+    padding: 2rem 2rem;
+  }
+
+  .footer-links a {
+    /* margin-left: 0rem; */
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid {
+    padding: 1rem 2rem !important;
+  }
+
+  main {
+    flex-direction: column-reverse;
+    padding: 2rem 2rem;
+  }
+
+  .main-cta-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .profile-cta {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .main-cta-text2 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .ctas-btns {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .learnmore {
+    padding: 1rem 0;
+  }
+
+  .sign-btn {
+    width: 100%;
+  }
+
+  .join {
+    max-width: 70% !important;
+  }
+
+  .tab-view {
+    display: none;
+  }
+
+  /* --------FEATURE HEADER---------- */
+
+  .features {
+    padding: 2rem 2rem;
+  }
+
+  .features-header {
+    width: 90%;
+    margin: 1rem 0;
+  }
+  .card-container {
+    flex-direction: column;
+  }
+
+  .what-section {
+    padding: 2rem 2rem;
+  }
+  .what-title {
+    font-size: 2.5rem;
+  }
+
+  .secondcard {
+    margin: 1rem 0;
+  }
+
+  .price-plan {
+    padding: 2rem 2rem;
+  }
+
+  .price-text {
+    text-align: center;
+    max-width: 80%;
+  }
+
+  .footer-section,
+  .footer-links {
+    padding: 1rem 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    padding: 0rem;
+    /* margin-left: 0; */
+  }
+
+  .footer-links a {
+    margin-left: 0rem;
+    margin: .5rem 0;
+
+  }
 }
